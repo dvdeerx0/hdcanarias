@@ -1,0 +1,205 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-gray-primary: #eee;
+  --color-gray-secondary: #ddd;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--color-gray-primary);
+}
+
+/* Header */
+
+.header {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+
+  background-image: 
+    linear-gradient(to left bottom, rgba(0, 168, 77, 0.7) 0%, rgba(0, 220, 101, 0.7) 100.01%),
+    url('./imgs/charco_manso_el_hierro.jpg');
+  background-position: left;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header__main-heading {
+  font-size: 6rem;
+  color: var(--color-gray-secondary);
+  margin-left: 6rem;
+}
+
+.header__main-heading--theory {
+  margin: 2rem 0 0 3rem;
+  display: block;
+  font-size: 4rem;
+}
+
+
+/* Separador */
+
+.separador {
+  width: 100%;
+  height: 1rem;
+  background-color: #333;
+}
+
+
+/* Página principal */
+
+.main {
+  width: 100%;
+  background-color: var(--color-gray-primary);
+}
+
+
+.tectonica-placas {
+  font-size: 1.8rem;
+  padding: 7rem 20rem 7rem 4rem;
+}
+
+.tectonica-placas__heading {
+  font-size: 3.2rem;
+}
+
+.tectonica-placas__paragraph,
+.tectonica-placas__heading {
+  margin: 1rem 0;
+}
+
+.tectonica-placas__image {
+  display: block;
+  margin: 3rem auto;
+  height: 20rem;
+}
+
+
+/* Creadores */
+
+.hecho-por {
+  margin-bottom: 10rem;
+  padding: 0 20rem 0 4rem;
+  list-style: none;
+  font-size: 1.6rem;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.hecho-por__persona {
+  text-decoration: none;
+  color: #000;
+  margin-left: auto;
+  position: relative;
+  transition: all 1s;
+}
+
+.hecho-por__persona:hover {
+  color: rgb(73, 73, 73);
+}
+
+.hecho-por__persona::after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(218, 0, 65);
+  display: none;
+  animation: redline 1s ease-in-out infinite;
+}
+
+.hecho-por__persona:hover::after {
+  display: block;
+} 
+
+
+/* Animacion */
+
+@keyframes redline {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+
+  48% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  52% {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+  
+  100% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+}
+
+/* Pruebas */
+
+
+/* .loader {
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.up-down-ball {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100%;
+  background-color: blue;
+  margin: 1rem;
+}
+
+.ball-1 {
+  animation: animated-ball 2s ease-in-out infinite;
+}
+
+.ball-2 {
+  animation: animated-ball 2s ease-in-out .25s infinite;
+}
+
+.ball-3 {
+  animation: animated-ball 2s ease-in-out .5s infinite;
+}
+
+
+@keyframes animated-ball {
+  0% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-30px);
+  }
+
+  80% {
+    transform: translateY(30px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+} */
+
+
