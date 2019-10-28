@@ -90,6 +90,22 @@ body {
 }
 
 
+/* Fuente */
+
+.fuente {
+  font-size: 1.5rem;
+  margin: 8rem 0 2rem;
+}
+
+.fuente__link:link, .fuente__link:visited {
+  text-decoration: none;
+  color: #444;
+}
+
+.fuente__link:hover {
+  text-decoration: underline;
+  color: #222;
+}
 
 /* Creadores */
 
@@ -104,7 +120,7 @@ body {
   align-items: flex-end;
 }
 
-.hecho-por__persona {
+.hecho-por__persona:link, .hecho-por__persona:visited {
   text-decoration: none;
   color: #000;
   margin-left: auto;
@@ -153,8 +169,18 @@ body {
   .tectonica-placas {
     width: 90%;
   }
+
+  .tectonica-placas__image {
+    height: 16rem;
+  }
 }
 
+
+@media screen and (max-width: 30rem) {
+  .tectonica-placas__image {
+    height: 12rem;
+  }
+}
 
 /* Animación */
 
